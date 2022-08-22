@@ -1,0 +1,44 @@
+.navbar{
+    background-color: #292929;
+    height: 140px;
+    width: 1440px;
+    margin: auto;
+}
+
+.navbar .navbar__wrapper{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar__wrapper .img_wrapper{
+    border: 1px solid #fff;
+    padding: .5rem;
+}
+
+.navbar__wrapper img{
+    width: 156.7px;
+    height: 32.94px;
+}
+
+@media (max-width: 768px){
+    .navbar{
+        width: 834px;
+        height: 140px;
+    }
+    .navbar .navbar__wrapper{
+    justify-content: center;
+}
+}
+
+@media (max-width: 568px){
+    .navbar{
+        width: 100%;
+        height: 67px; 
+   }
+
+   .navbar__wrapper img{
+    width: 87.68px;
+    height: 18.43px;
+}
+}
