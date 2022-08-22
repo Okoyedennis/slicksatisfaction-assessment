@@ -6,7 +6,7 @@ const Movie = ({ title, fetchUrl, searchTerm }) => {
   const [movie, setMovie] = useState([]);
   const imageBaseUrl = "https://image.tmdb.org/t/p/original/";
 
-  const fetchMovie = () => {
+  useEffect(() => {
     axios
       .get(`https://api.themoviedb.org/3${fetchUrl}`)
       .then((resp) => {
@@ -15,11 +15,7 @@ const Movie = ({ title, fetchUrl, searchTerm }) => {
       .catch((error) => {
         console.error(error);
       });
-  };
-
-  useEffect(() => {
-    fetchMovie();
-  }, []);
+  }, [fetchUrl]);
   return (
     <div className="movies__wrapper">
       {movie &&
